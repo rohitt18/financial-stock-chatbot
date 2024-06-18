@@ -6,10 +6,6 @@ import streamlit as st
 import yfinance as yf
 import os
 
-# openai.api_key = open('API_KEY', 'r').read()
-
-openai.api_key = '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'
-
 def get_stock_price(ticker):
     return str(yf.Ticker(ticker).history(period='1y').iloc[-1].Close)
 
